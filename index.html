@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper and Scissors</title>
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+        * {
+            font-family: 'Montserrat', sans-serif;
+            background-color: black;
+        }
+
+        h1,
+        h3,
+        h4 {
+            color: white;
+            text-align: center;
+        }
+
+        #vs-text {
+            display: flex;
+            color: white;
+            justify-content: center;
+            margin-top: 25vh;
+            font-size: 48px;
+        }
+
+        h3 {
+            margin-top: 18vh;
+        }
+
+        #player-text {
+            margin-right: 15%;
+        }
+
+        #computer-text {
+            margin-left: 15%;
+        }
+
+        .button-set {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            padding-top: 18vh;
+        }
+
+        button {
+            border: 5px solid white;
+            font-weight: bold;
+            color: white;
+            height: 3rem;
+            min-width: 10rem;
+            transition: 200ms;
+        }
+
+        button:hover {
+            border: 5px solid orange;
+            font-size: 18px;
+            color: orange;
+            height: 4rem;
+            min-width: 11rem;
+            transition: 200ms;
+        }
+    </style>
+    <h1>Rock, Paper and Scissors</h1>
+    <h4>Player vs. Computer</h4>
+    <div id="vs-text">
+        <span id="player-text">Rock</span>
+        <span id="vs">vs.</span>
+        <span id="computer-text">Scissors</span>
+    </div>
+    <h3 id="game-text">hrrrr</h3>
+    <div class="button-set">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+</body>
+
+</html>
