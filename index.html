@@ -18,7 +18,8 @@
 
         h1,
         h3,
-        h4 {
+        h4,
+        #score {
             color: white;
             text-align: center;
         }
@@ -41,6 +42,13 @@
 
         #computer-text {
             margin-left: 15%;
+        }
+
+        #score {
+            display: flex;
+            justify-content: center;
+            font-weight: lighter;
+            gap: 8rem;
         }
 
         .button-set {
@@ -67,6 +75,7 @@
             min-width: 11rem;
             transition: 200ms;
         }
+
     </style>
     <h1>Rock, Paper and Scissors</h1>
     <h4>Player vs. Computer</h4>
@@ -76,6 +85,14 @@
         <span id="computer-text">Computer</span>
     </div>
     <h3 id="game-text">Click your choice to start!</h3>
+    <div id="score">
+        <div>
+            Player score: <span id="player-score">0</span>
+        </div>
+        <div>
+            Computer score: <span id="computer-score">0</span>
+        </div>
+    </div>
     <div class="button-set">
         <button id="rock">Rock</button>
         <button id="paper">Paper</button>

@@ -31,7 +31,6 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     let playerScore = 0;
     let computerScore = 0;
-    let noOfRounds = 0;
     let textOfGame = document.getElementById("game-text");
 
     function handleRound(playerSelection) {
@@ -45,13 +44,17 @@ function game() {
             computerScore++;
         }
 
-        noOfRounds++;
-
-        if (noOfRounds === 5) {
+        if (playerScore === 5 || computerScore === 5) {
             playerScore = 0;
             computerScore = 0;
-            noOfRounds = 0;
+            if (computerScore === 5)
+                textOfGame.innerHTML = "Computer Won the Game!";
+            else
+                textOfGame.innerHTML = "Player Won the Game!";
         }
+
+        document.getElementById("player-score").innerHTML = playerScore;
+        document.getElementById("computer-score").innerHTML = computerScore;
     }
 
     document.getElementById("rock").addEventListener("click", function () {
