@@ -76,6 +76,42 @@
             transition: 200ms;
         }
 
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: black;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: black;
+            color: orange;
+            margin: 15% auto;
+            padding: 20px;
+            border:1px solid orange;
+            width: 50%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: orange;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
     </style>
     <h1>Rock, Paper and Scissors</h1>
     <h4>Player vs. Computer</h4>
@@ -97,6 +133,12 @@
         <button id="rock">Rock</button>
         <button id="paper">Paper</button>
         <button id="scissors">Scissors</button>
+    </div>
+    <div id="winner-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="winner-text"></p>
+        </div>
     </div>
     <script defer src="index.js"></script>
 </body>
